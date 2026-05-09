@@ -1,7 +1,5 @@
 "use client";
 
-import { HeroOrb } from "@/components/3d/hero-orb";
-import { GlassCard } from "@/components/ui/glass-card";
 import { MagneticButton } from "@/components/ui/magnetic-button";
 import { motion } from "framer-motion";
 
@@ -50,14 +48,37 @@ export function HeroSection() {
         </motion.div>
       </div>
       <motion.div
-        className="hero-stage"
-        initial={{ opacity: 0, y: 34, scale: 0.98 }}
-        animate={{ opacity: 1, y: 0, scale: 1 }}
-        transition={{ duration: 0.78, delay: 0.16, ease: [0.22, 1, 0.36, 1] }}
+        className="hero-object-stage"
+        initial={{ opacity: 0, x: 70, y: 20, scale: 0.88, rotate: -10, filter: "blur(18px)" }}
+        animate={{ opacity: 1, x: 0, y: 0, scale: 1, rotate: 0, filter: "blur(0px)" }}
+        transition={{ duration: 1.05, delay: 0.18, ease: [0.16, 1, 0.3, 1] }}
+        aria-hidden="true"
       >
-        <HeroOrb />
-        <GlassCard className="system-chip chip-a"><small>System status</small><b>Live growth engine</b></GlassCard>
-        <GlassCard className="system-chip chip-b"><small>Delivery model</small><b>Strategy to launch</b></GlassCard>
+        <motion.video
+          className="hero-motion-object hero-motion-video"
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="auto"
+          animate={{
+            y: [0, -24, 8, 0],
+            rotate: [0, 3.5, -2.5, 0],
+            scale: [1, 1.035, 0.99, 1],
+          }}
+          transition={{
+            duration: 8,
+            repeat: Infinity,
+            ease: "easeInOut",
+          }}
+        >
+          <source src="/hero-motion-object.mp4" type="video/mp4" />
+        </motion.video>
+        <motion.div
+          className="hero-object-glow"
+          animate={{ opacity: [0.36, 0.68, 0.42], scale: [0.92, 1.08, 0.96] }}
+          transition={{ duration: 5.8, repeat: Infinity, ease: "easeInOut" }}
+        />
       </motion.div>
     </section>
   );
