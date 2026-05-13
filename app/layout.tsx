@@ -3,15 +3,15 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: {
-    default: "Tecvion Solutions | Futuristic Software Agency",
+    default: "Tecvion Solutions | Creative Designer Portfolio",
     template: "%s | Tecvion Solutions",
   },
   description:
-    "Tecvion Solutions builds premium digital ecosystems through branding, UI/UX, app development, AI-powered systems, and growth technology.",
+    "Tecvion Solutions designs bold digital experiences, brand systems, websites, applications, social campaigns, and print visuals for future-ready brands.",
   openGraph: {
-    title: "Tecvion Solutions",
+    title: "Tecvion Solutions | Creative Designer Portfolio",
     description:
-      "Premium futuristic software agency for modern digital businesses.",
+      "Bold digital experiences, strategic creative systems, and premium visual direction for modern brands.",
     type: "website",
   },
 };

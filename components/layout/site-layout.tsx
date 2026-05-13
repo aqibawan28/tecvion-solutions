@@ -52,8 +52,24 @@ export function SiteLayout({ children }: { children: ReactNode }) {
       <Navbar />
       <main>{children}</main>
       <footer className="site-footer">
-        <div><strong>Tecvion Solutions</strong><p>Premium digital experiences for modern businesses.</p></div>
-        <a href="mailto:hello@tecvion.com">hello@tecvion.com</a>
+        <div>
+          <strong>TECVION SOLUTIONS</strong>
+          <p>Creative design, digital products, brand systems, social content, and campaign visuals built with strategy, motion, and visual impact.</p>
+          <small>Designed with raw energy. Built with structure.</small>
+        </div>
+        <div className="footer-links">
+          <a href="#home">Home</a>
+          <a href="#services">Services</a>
+          <a href="#work">Work</a>
+          <a href="#contact">Contact</a>
+        </div>
+        <div className="footer-links">
+          <a href="https://instagram.com">Instagram</a>
+          <a href="https://behance.net">Behance</a>
+          <a href="https://dribbble.com">Dribbble</a>
+          <a href="https://linkedin.com">LinkedIn</a>
+        </div>
+        <p className="copyright">(c) 2026 Tecvion Solutions. All rights reserved.</p>
       </footer>
     </div>
   );
